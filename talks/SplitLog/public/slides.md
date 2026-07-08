@@ -213,24 +213,22 @@ Note:
 
 ## 並行作業を前提にしたSplit
 
-<div class="split-mode-layout">
+<div class="split-shot-comparison">
   <div>
-    <div class="mode-comparison">
-      <div>
-        <h3>ラジオ配分</h3>
-        <p>今フォーカスしている1つのSplitに時間を積む。</p>
-        <small>集中して1タスクを進めるときに向いている</small>
-      </div>
-      <div>
-        <h3>チェック配分</h3>
-        <p>複数のSplitを有効にして、並行作業の時間を配分する。</p>
-        <small>AIに任せた作業と自分の作業が並ぶときに使いやすい</small>
-      </div>
-    </div>
-    <div class="center-note">「作業は必ず1つだけ」と決めつけないところがポイント</div>
+    <h3>ラジオ配分</h3>
+    <img src="assets/split-list-radio.png" alt="1つのSplitだけを選択しているラジオ配分の画面" />
+    <p>今フォーカスしている1つのSplitに時間を積む。</p>
+    <small>集中して1タスクを進めるときに向いている</small>
   </div>
-  <img class="spot-illustration" src="assets/parallel-split.png" alt="複数タスクに時間を配分するイラスト" />
+  <div>
+    <h3>チェック配分</h3>
+    <img src="assets/split-list-checkbox.png" alt="3つのSplitを同時に選択しているチェック配分の画面" />
+    <p>複数のSplitを有効にして、並行作業の時間を配分する。</p>
+    <small>AI待ち、自分の作業、レビューなどが並ぶときに使いやすい</small>
+  </div>
 </div>
+
+<div class="center-note">「作業は必ず1つだけ」と決めつけないところがポイント</div>
 
 ---
 

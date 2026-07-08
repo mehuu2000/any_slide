@@ -727,6 +727,51 @@
   margin-top: 0.6em;
 }
 
+.split-shot-comparison {
+  display: grid;
+  gap: 0.8em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 0.7em;
+}
+
+.split-shot-comparison div {
+  background: var(--slide-surface);
+  border: 1px solid var(--slide-border);
+  border-radius: 8px;
+  padding: 0.65em;
+}
+
+.split-shot-comparison h3 {
+  color: var(--slide-ink);
+  font-size: 0.84em;
+  margin: 0 0 0.45em;
+}
+
+.split-shot-comparison img {
+  background: #dbe4ee;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+  display: block;
+  margin-bottom: 0.55em;
+  width: 100%;
+}
+
+.split-shot-comparison p {
+  color: var(--slide-ink);
+  font-size: 0.5em;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.split-shot-comparison small {
+  color: var(--slide-muted);
+  display: block;
+  font-size: 0.42em;
+  line-height: 1.45;
+  margin-top: 0.55em;
+}
+
 .architecture {
   align-items: stretch;
   display: grid;
@@ -884,6 +929,7 @@
   .shot-callout-layout,
   .daily-flow-layout,
   .daily-flow,
+  .split-shot-comparison,
   .problem-layout,
   .value-layout,
   .split-mode-layout,
