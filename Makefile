@@ -36,7 +36,13 @@ init:
 		echo "Error: destination already exists: $(TALKS_DIR)/$(SLIDE_NAME)"; \
 		exit 1; \
 	fi
-	@cp -R "$(TEMPLATE_DIR)" "$(TALKS_DIR)/$(SLIDE_NAME)"
+	@mkdir -p "$(TALKS_DIR)/$(SLIDE_NAME)"
+	@tar \
+		--exclude './node_modules' \
+		--exclude './dist' \
+		--exclude './.vite' \
+		-C "$(TEMPLATE_DIR)" \
+		-cf - . | tar -C "$(TALKS_DIR)/$(SLIDE_NAME)" -xf -
 	@echo "Created $(TALKS_DIR)/$(SLIDE_NAME)"
 	@echo ""
 	@echo "Next:"

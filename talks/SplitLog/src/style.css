@@ -1,0 +1,51 @@
+:root {
+  --slide-accent: #0f766e;
+  --slide-ink: #1f2937;
+  --slide-muted: #64748b;
+}
+
+.reveal {
+  color: var(--slide-ink);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--slide-ink);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.reveal h1 {
+  font-size: 2.4em;
+}
+
+.reveal h2 {
+  border-left: 0.16em solid var(--slide-accent);
+  padding-left: 0.35em;
+}
+
+.reveal p,
+.reveal li {
+  line-height: 1.35;
+}
+
+.reveal code {
+  border-radius: 4px;
+}
+
+.reveal .title-slide {
+  text-align: center;
+}
+
+.reveal .title-slide h1 {
+  color: var(--slide-accent);
+}
+
+.reveal .title-slide p {
+  color: var(--slide-muted);
+}
