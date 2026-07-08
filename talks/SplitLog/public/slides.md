@@ -107,7 +107,7 @@ Note:
 
 ---
 
-<!-- .slide: class="content-slide mock-slide" -->
+<!-- .slide: class="content-slide app-shot-slide" -->
 
 ## 使い方のイメージ
 
@@ -121,26 +121,91 @@ Note:
   <div>サマリーコピー</div>
 </div>
 
-<div class="mock-window">
-  <div class="mock-top">
-    <strong>SplitLog</strong>
-    <span>架空作業内容！</span>
+<div class="usage-shot-layout">
+  <div class="usage-copy">
+    <p><strong>1. セッションを開く</strong><br />メニューバーからSplitLogを開き、対象セッションを表示する。</p>
+    <p><strong>2. 作業を測る</strong><br />再開して、進めている作業のSplitに時間を積む。</p>
+    <p><strong>3. メモを残す</strong><br />作業中に気づいたことをSplit単位で残す。</p>
+    <p><strong>4. 日報へ渡す</strong><br />最後にサマリーをコピーして、振り返りや日報に使う。</p>
   </div>
-  <div class="mock-body">
-    <div class="mock-ring">
-      <i></i><i></i><i></i>
-      <b>2:34</b>
+  <figure class="app-shot-frame">
+    <img src="assets/splitlog-app-overview.png" alt="SplitLogの実アプリ画面" />
+    <figcaption>実際のSplitLog画面：セッション「架空作業内容！」</figcaption>
+  </figure>
+</div>
+
+Note:
+実アプリのスクリーンショットと、操作の流れを対応させて説明する。
+
+---
+
+<!-- .slide: class="content-slide app-shot-slide" -->
+
+## 実画面で見る操作ポイント
+
+<div class="shot-callout-layout">
+  <figure class="app-shot-frame large-shot">
+    <img src="assets/splitlog-app-overview.png" alt="SplitLogのセッション画面" />
+  </figure>
+  <div class="callout-stack">
+    <div>
+      <span>1</span>
+      <h3>セッション名</h3>
+      <p>いま記録している作業単位を上部で確認する。</p>
     </div>
-    <div class="mock-splits">
-      <p><em class="blue"></em> 実装調査 <strong>0:48</strong></p>
-      <p><em class="green"></em> UI修正 <strong>1:12</strong></p>
-      <p><em class="amber"></em> レビュー対応 <strong>0:34</strong></p>
+    <div>
+      <span>2</span>
+      <h3>リング</h3>
+      <p>全体の時間配分を、色の割合でざっくり把握する。</p>
+    </div>
+    <div>
+      <span>3</span>
+      <h3>Split一覧</h3>
+      <p>作業名、メモ、経過時間をSplitごとに見る。</p>
+    </div>
+    <div>
+      <span>4</span>
+      <h3>操作ボタン</h3>
+      <p>再開、Split、停止、履歴、削除を必要なタイミングで使う。</p>
     </div>
   </div>
 </div>
 
 Note:
-実画面スクリーンショットが使える場合は、このスライドのイメージ部分を差し替える。
+この画面では、セッション名、時間配分、Splitごとの時間、操作ボタンが一画面にまとまっていることを説明する。
+
+---
+
+<!-- .slide: class="content-slide app-shot-slide" -->
+
+## 日報につながる使い方
+
+<div class="daily-flow-layout">
+  <div class="daily-flow">
+    <div>
+      <strong>測る</strong>
+      <p>「実装調査」「UI修正」など、実際の作業名で時間を残す。</p>
+    </div>
+    <div>
+      <strong>分ける</strong>
+      <p>割り込みやAI待ちを、別のSplitとして切り出す。</p>
+    </div>
+    <div>
+      <strong>書く</strong>
+      <p>各Splitのメモに、やったことや判断を短く残す。</p>
+    </div>
+    <div>
+      <strong>まとめる</strong>
+      <p>最後にサマリーをコピーし、日報や振り返りの下書きにする。</p>
+    </div>
+  </div>
+  <figure class="app-shot-frame compact-shot">
+    <img src="assets/splitlog-app-overview.png" alt="日報作成につながるSplitLog画面" />
+  </figure>
+</div>
+
+Note:
+単なるタイマーではなく、あとで文章化しやすい作業ログを作る流れとして説明する。
 
 ---
 
