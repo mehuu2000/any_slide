@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Reveal JS presentation</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- highlight Theme -->
+  
+  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
+  
+	
+		
+	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+	
+	
+	
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/customcontrols/style.css">
+  
+	
+
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/black.css" id="theme">
+  
+  
+
+  <link rel="stylesheet" href="libs/styles/tasklist.css">
+	<link rel="stylesheet" href="libs/styles/iota.css">
+	<link rel="stylesheet" href="libs/styles/layout.css">
+
+
+  <!-- Revealjs Theme -->
+  
+
+   <!-- css list -->
+	
+
+   
+
+</head>
+
+<body>
+
+   
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+
+
+    
+        <section class="title-slide splitlog-title">
+            
+            <!-- .slide: class="title-slide splitlog-title" -->
+<div class="title-layout">
+  <img class="app-icon" src="assets/splitlog-icon.png" alt="SplitLog app icon" />
+  <div>
+    <p class="eyebrow">個人開発アプリ紹介</p>
+    <h1>SplitLogとは何なのか</h1>
+    <p class="lead">作業時間とメモを、日報にそのまま使える形で残す</p>
+  </div>
+</div>
+<p>Note:
+最初に、SplitLogは「時間を測るアプリ」というより、作業ログを日報に使える形で残すためのアプリとして紹介する。</p>
+
+            </section>
+    
+
+
+
+    
+        <section class="content-slide">
+            
+            <!-- .slide: class="content-slide" -->
+<h2>作った背景</h2>
+<div class="problem-layout">
+  <div class="problem-list">
+    <div>
+      <span>01</span>
+      <p>作業時間を記録したいが、タスクごとに測るのが面倒</p>
+    </div>
+    <div>
+      <span>02</span>
+      <p>AIと並行して進める作業が増え、ひとつのタイマーでは追いにくい</p>
+    </div>
+    <div>
+      <span>03</span>
+      <p>日報を書くときに、時間・メモ・作業内容を集め直している</p>
+    </div>
+  </div>
+  <img class="problem-visual" src="assets/background-problems.png" alt="作業時間記録、並行作業、日報作成の課題を表すイラスト" />
+</div>
+<p>Note:
+競合比較ではなく、自分の作業スタイルで起こっていた困りごととして説明する。</p>
+
+            </section>
+    
+
+
+
+    
+        <section class="content-slide">
+            
+            <!-- .slide: class="content-slide" -->
+<h2>SplitLogでやりたいこと</h2>
+<div class="value-layout">
+  <div>
+    <div class="three-points">
+      <div>
+        <strong>測る</strong>
+        <p>作業をSplit単位で区切り、タスクごとの時間を残す</p>
+      </div>
+      <div>
+        <strong>書く</strong>
+        <p>各Splitにメモを付けて、作業内容をその場で残す</p>
+      </div>
+      <div>
+        <strong>まとめる</strong>
+        <p>1日の作業をサマリー化し、日報へコピーできる</p>
+      </div>
+    </div>
+    <div class="center-note">「測ったあとに使えるログ」までをアプリ内で完結させる</div>
+  </div>
+  <img class="spot-illustration" src="assets/measure-write-summary.png" alt="時間計測、メモ、サマリー化を表すイラスト" />
+</div>
+            </section>
+    
+
+
+
+    
+        <section class="content-slide">
+            
+            <!-- .slide: class="content-slide" -->
+<h2>主な機能</h2>
+<div class="feature-grid">
+  <div>
+    <span class="feature-icon feature-icon-menu"></span>
+    <h3>メニューバー常駐</h3>
+    <p>必要なときだけ開ける。作業画面を邪魔しない。</p>
+  </div>
+  <div>
+    <span class="feature-icon feature-icon-session"></span>
+    <h3>セッション管理</h3>
+    <p>日ごと・作業単位でセッションを分けて保存できる。</p>
+  </div>
+  <div>
+    <span class="feature-icon feature-icon-split"></span>
+    <h3>Splitごとの記録</h3>
+    <p>時間、名前、メモをSplit単位で管理できる。</p>
+  </div>
+  <div>
+    <span class="feature-icon feature-icon-summary"></span>
+    <h3>サマリーコピー</h3>
+    <p>日報や振り返りに貼り付けやすい形式で出力できる。</p>
+  </div>
+  <div>
+    <span class="feature-icon feature-icon-shortcut"></span>
+    <h3>ショートカット</h3>
+    <p>Split、停止、再開、メモ表示をキーボードから操作できる。</p>
+  </div>
+  <div>
+    <span class="feature-icon feature-icon-settings"></span>
+    <h3>表示設定</h3>
+    <p>テーマ、リング周期、サマリー形式などを調整できる。</p>
+  </div>
+</div>
+            </section>
+    
+
+
+
+    
+        <section class="content-slide app-shot-slide">
+            
+            <!-- .slide: class="content-slide app-shot-slide" -->
+<h2>使い方のイメージ</h2>
+<div class="workflow">
+  <div>開く</div>
+  <span></span>
+  <div>開始</div>
+  <span></span>
+  <div>Split / メモ</div>
+  <span></span>
+  <div>サマリーコピー</div>
+</div>
+<div class="usage-shot-layout">
+  <div class="usage-copy">
+    <p><strong>1. セッションを開く</strong><br />メニューバーからSplitLogを開き、対象セッションを表示する。</p>
+    <p><strong>2. 作業を測る</strong><br />再開して、進めている作業のSplitに時間を積む。</p>
+    <p><strong>3. メモを残す</strong><br />作業中に気づいたことをSplit単位で残す。</p>
+    <p><strong>4. 日報へ渡す</strong><br />最後にサマリーをコピーして、振り返りや日報に使う。</p>
+  </div>
+  <figure class="app-shot-frame">
+    <img src="assets/splitlog-app-overview.png" alt="SplitLogの実アプリ画面" />
+    <figcaption>実際のSplitLog画面：セッション「架空作業内容！」</figcaption>
+  </figure>
+</div>
+<p>Note:
+実アプリのスクリーンショットと、操作の流れを対応させて説明する。</p>
+
+            </section>
+    
+
+
+
+    
+        <section class="content-slide app-shot-slide">
+            
+            <!-- .slide: class="content-slide app-shot-slide" -->
+<h2>実画面で見る操作ポイント</h2>
+<div class="shot-callout-layout">
+  <figure class="app-shot-frame large-shot">
+    <img src="assets/splitlog-app-overview.png" alt="SplitLogのセッション画面" />
+  </figure>
+  <div class="callout-stack">
+    <div>
+      <span>1</span>
+      <h3>セッション名</h3>
+      <p>いま記録している作業単位を上部で確認する。</p>
+    </div>
+    <div>
+      <span>2</span>
+      <h3>リング</h3>
+      <p>全体の時間配分を、色の割合でざっくり把握する。</p>
+    </div>
+    <div>
+      <span>3</span>
+      <h3>Split一覧</h3>
+      <p>作業名、メモ、経過時間をSplitごとに見る。</p>
+    </div>
+    <div>
+      <span>4</span>
+      <h3>操作ボタン</h3>
+      <p>再開、Split、停止、履歴、削除を必要なタイミングで使う。</p>
+    </div>
+  </div>
+</div>
+<p>Note:
+この画面では、セッション名、時間配分、Splitごとの時間、操作ボタンが一画面にまとまっていることを説明する。</p>
+
+            </section>
+    
+
+
+
+    
+        <section class="content-slide app-shot-slide">
+            
+            <!-- .slide: class="content-slide app-shot-slide" -->
+<h2>日報につながる使い方</h2>
+<div class="daily-flow-layout">
+  <div class="daily-flow">
+    <div>
+      <strong>測る</strong>
+      <p>「実装調査」「UI修正」など、実際の作業名で時間を残す。</p>
+    </div>
+    <div>
+      <strong>分ける</strong>
+      <p>割り込みやAI待ちを、別のSplitとして切り出す。</p>
+    </div>
+    <div>
+      <strong>書く</strong>
+      <p>各Splitのメモに、やったことや判断を短く残す。</p>
+    </div>
+    <div>
+      <strong>まとめる</strong>
+      <p>最後にサマリーをコピーし、日報や振り返りの下書きにする。</p>
+    </div>
+  </div>
+  <figure class="app-shot-frame compact-shot">
+    <img src="assets/splitlog-app-overview.png" alt="日報作成につながるSplitLog画面" />
+  </figure>
+</div>
+<p>Note:
+単なるタイマーではなく、あとで文章化しやすい作業ログを作る流れとして説明する。</p>
+
+            </section>
+    
+
+
+
+    
+        <section class="content-slide">
+            
+            <!-- .slide: class="content-slide" -->
+<h2>並行作業を前提にしたSplit</h2>
+<div class="split-shot-comparison">
+  <div>
+    <h3>ラジオ配分</h3>
+    <img src="assets/split-list-radio.png" alt="1つのSplitだけを選択しているラジオ配分の画面" />
+    <p>今フォーカスしている1つのSplitに時間を積む。</p>
+    <small>集中して1タスクを進めるときに向いている</small>
+  </div>
+  <div>
+    <h3>チェック配分</h3>
+    <img src="assets/split-list-checkbox.png" alt="3つのSplitを同時に選択しているチェック配分の画面" />
+    <p>複数のSplitを有効にして、並行作業の時間を配分する。</p>
+    <small>AI待ち、自分の作業、レビューなどが並ぶときに使いやすい</small>
+  </div>
+</div>
+<div class="center-note">「作業は必ず1つだけ」と決めつけないところがポイント</div>
+            </section>
+    
+
+
+
+    
+        <section class="content-slide">
+            
+            <!-- .slide: class="content-slide" -->
+<h2>軽い技術構成</h2>
+<div class="architecture">
+  <div>
+    <h3>Presentation</h3>
+    <p>SwiftUIのPopover UI<br />AppKitのメニューバー制御</p>
+  </div>
+  <span></span>
+  <div>
+    <h3>Domain</h3>
+    <p>StopwatchService<br />Session / Split の状態管理</p>
+  </div>
+  <span></span>
+  <div>
+    <h3>Storage</h3>
+    <p>sessions.json<br />UserDefaults</p>
+  </div>
+</div>
+<ul class="compact-list">
+  <li>状態管理と画面表示を分け、UI変更に引きずられにくくした</li>
+  <li>セッションはローカル保存し、次回起動後も参照できる</li>
+  <li>主要な時間計測・Split操作はテストで検証している</li>
+</ul>
+<p>Note:
+コードの細かい説明はしない。社内共有として、構造を軽く紹介する程度にする。</p>
+
+            </section>
+    
+
+
+
+    
+        <section class="content-slide">
+            
+            <!-- .slide: class="content-slide" -->
+<h2>作って得たナレッジ</h2>
+<div class="ai-loop-layout">
+  <img class="loop-illustration" src="assets/ai-ux-loop.png" alt="開発者とAIがUI/UXを改善するループのイラスト" />
+  <div class="role-cards">
+    <div>
+      <h3>UIは絵で伝える</h3>
+      <p><strong>開発者</strong>がFigmaやスクリーンショットで理想形を作る。</p>
+      <p><strong>AI</strong>がその絵を見て、実アプリのUIへ再現する。</p>
+    </div>
+    <div>
+      <h3>UXは操作前提で伝える</h3>
+      <p><strong>開発者</strong>が「何ができるか」「どう使うか」を明文化する。</p>
+      <p><strong>AI</strong>が前提を踏まえて操作し、使いにくい箇所を見つける。</p>
+    </div>
+    <div>
+      <h3>修正ループを作る</h3>
+      <p><strong>AI</strong>が実アプリを操作し、スクリーンショットを撮影する。</p>
+      <p><strong>AI</strong>が理想形と実画面を比較し、ズレを直す。</p>
+    </div>
+  </div>
+</div>
+            </section>
+    
+
+
+
+    
+        <section class="content-slide">
+            
+            <!-- .slide: class="content-slide" -->
+<h2>今後の展望</h2>
+<div class="roadmap-layout">
+  <div class="roadmap">
+    <div>
+      <span>Now</span>
+      <p>macOSのメニューバーアプリとして利用</p>
+    </div>
+    <div>
+      <span>Next</span>
+      <p>日報に使いやすいサマリー表現をさらに改善</p>
+    </div>
+    <div>
+      <span>Future</span>
+      <p>FlutterでmacOS / Windows / Android / iPhone対応を進める</p>
+    </div>
+  </div>
+  <img class="spot-illustration" src="assets/future-platforms.png" alt="複数プラットフォーム展開を表すイラスト" />
+</div>
+            </section>
+    
+
+
+
+    
+        <section class="content-slide closing-slide">
+            
+            <!-- .slide: class="content-slide closing-slide" -->
+<h2>まとめ</h2>
+<div class="closing-layout">
+  <img class="closing-icon" src="assets/splitlog-icon.png" alt="SplitLog app icon" />
+  <div>
+    <div class="summary-points">
+      <p><strong>SplitLog</strong> は、作業時間・メモ・日報化をつなぐための個人開発アプリ</p>
+      <p>複数タスクやAIとの並行作業を前提に、Split単位でログを残せる</p>
+      <p>開発では、AIに任せる部分と人間が言語化すべき部分の切り分けが重要だった</p>
+    </div>
+<div class="closing-message">作業ログを、あとで使える形にする</div>
+  </div>
+</div>
+            </section>
+    
+
+
+    </div>
+
+
+  </div>
+
+  <div class="line top"></div>
+  <div class="line bottom"></div>
+  <div class="line left"></div>
+  <div class="line right"></div>
+
+  <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+<script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/menu/menu.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/RecordRTC.js"></script>-->
+
+  
+
+<script>
+  const printPlugins = [
+      RevealNotes,
+      RevealHighlight,
+      RevealMath.MathJax3,
+      RevealAnimate,
+      RevealChalkboard, 
+			RevealEmbedTweet,
+			RevealChart,
+		];
+
+		const plugins =  [...printPlugins,
+		RevealZoom, 
+		RevealSearch, 
+				RevealMarkdown, 
+				RevealMenu, 
+				RevealFullscreen,
+				RevealAnything,
+				//RevealAudioSlideshow,
+				//RevealAudioRecorder,
+				RevealCustomControls, 
+				// poll
+				// question
+				// seminar
+				Verticator 
+				 ]
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+      controlsTutorial: true,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: false,
+      //#showSlideNumber "all" "print" "speaker"
+      hash: true, //# hash: false,
+      //# respondToHashChanges: true,
+      //# history: false,
+      keyboard: true,
+      //#keyboardCondition: null,
+      overview: true,
+      center: true,
+      touch: true,
+      loop: false,
+      rtl: false,
+      //#navigationMode: 'default', linear grid
+      shuffle: false,
+      fragments: true,
+      fragmentInURL: false,
+      embedded: false,
+      help: true,
+      //#pause: true
+      showNotes: false,
+      autoPlayMedia: false, // TODO fix this to a nullable value
+      //#preloadIframes: null. true false
+      //#autoAnimate: true
+      //#autoAnimateMatcher: null,
+      //#autoAnimateEasing: 'ease',
+      //autoAnimateDuration: 1.0,
+      //#autoAnimateUnmatched: true
+      //#autoAnimateStyles: []
+      autoSlide: 0, // TODO fix this to a falseable value
+      autoSlideStoppable: true,
+      autoSlideMethod: '0',
+      defaultTiming: 120,
+      mouseWheel: false,
+      //#previewLinks: false
+      //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+      //#postMessageEvents: false,
+      //#focusBodyOnPageVisibilityChange: true,
+      transition: 'slide',
+      transitionSpeed: 'default',
+      backgroundTransition: 'fade',
+      //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+      //#pdfSeparateFragments: true,
+      //#pdfPageHeightOffset: -1,
+      viewDistance: 3,
+      //#mobileViewDistance: 2,
+      display: 'block',
+      //#hideInactiveCursor: true,
+      //#hideCursorTime: 5000
+
+      // Parallax Background
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      parallaxBackgroundHorizontal: 0,
+      parallaxBackgroundVertical: 0,
+
+      //Presentation Size
+      width: 960,
+			height: 700,
+			margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2,
+      disableLayout: false,
+
+      audio: {
+        prefix: 'audio/', // audio files are stored in the "audio" folder
+        suffix: '.ogg', // audio files have the ".ogg" ending
+        textToSpeechURL: null, // the URL to the text to speech converter
+        defaultNotes: false, // use slide notes as default for the text to speech converter
+        defaultText: false, // use slide text as default for the text to speech converter
+        advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+        autoplay: false, // automatically start slideshow
+        defaultDuration: 5, // default duration in seconds if no audio is available
+        defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+        playerOpacity: 0.05, // opacity value of audio player if unfocused
+        playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+      },
+      
+      chalkboard: { // font-awesome.min.css must be available
+        //src: "chalkboard/chalkboard.json",
+        storage: "chalkboard-demo",
+      },
+      
+			customcontrols: {
+					controls: [
+      						{
+						  id: 'toggle-overview',
+						  title: 'Toggle overview (O)',
+						  icon: '<i class="fa fa-th"></i>',
+						  action: 'Reveal.toggleOverview();'
+						}
+						,
+      {
+        icon: '<i class="fa fa-pen-square"></i>',
+        title: 'Toggle chalkboard (B)',
+        action: 'RevealChalkboard.toggleChalkboard();'
+      },
+      {
+        icon: '<i class="fa fa-pen"></i>',
+        title: 'Toggle notes canvas (C)',
+        action: 'RevealChalkboard.toggleNotesCanvas();'
+      }
+      
+				]
+			},
+			chart: {
+					defaults: { 
+						color: 'lightgray', // color of labels
+						scale: { 
+							beginAtZero: true, 
+							ticks: { stepSize: 1 },
+							grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+			},
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				anything: [ 
+				{
+		className: "plot",
+		defaults: {width:500, height: 500, grid:true},
+		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
+	 },
+	 {
+		className: "chart",  
+		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
+	 },
+	 {
+		className: "anything",
+		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
+	 },
+					],
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
+		});
+			
+
+
+	    // Change chalkboard theme : 
+		function changeTheme(input) {
+			var config = {};
+			config.theme = input.value;
+			Reveal.getPlugin("RevealChalkboard").configure(config);
+			input.blur();
+		}
+
+		// // Handle the message inside the webview
+        // window.addEventListener('message', event => {
+
+        //     const message = event.data; // The JSON data our extension sent
+
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
+
+		if (window.location.search.match(/print-pdf-now/gi)) {
+      		setTimeout(() => {
+				window.print();
+			  }, 2500);
+			
+    }
+</script>
+
+</body>
+
+</html>
