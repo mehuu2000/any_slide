@@ -206,31 +206,67 @@ Note:
 
 ## 使い方のイメージ
 
-<div class="workflow">
-  <div>開く</div>
-  <span></span>
-  <div>開始</div>
-  <span></span>
-  <div>Split / メモ</div>
-  <span></span>
-  <div>サマリーコピー</div>
-</div>
-
-<div class="usage-shot-layout">
-  <div class="usage-copy">
-    <p><strong>1. セッションを開く</strong><br />メニューバーからSplitLogを開き、対象セッションを表示する。</p>
-    <p><strong>2. 作業を測る</strong><br />再開して、進めている作業のSplitに時間を積む。</p>
-    <p><strong>3. メモを残す</strong><br />作業中に気づいたことをSplit単位で残す。</p>
-    <p><strong>4. 日報へ渡す</strong><br />最後にサマリーをコピーして、振り返りや日報に使う。</p>
-  </div>
-  <figure class="app-shot-frame">
-    <img src="assets/splitlog-app-overview.png" alt="SplitLogの実アプリ画面" />
-    <figcaption>実際のSplitLog画面：セッション「架空作業内容！」</figcaption>
+<div class="usage-shot-layout usage-step">
+  <figure class="app-shot-frame usage-main-shot">
+    <img src="assets/splitlog-app-overview.png" alt="SplitLogのセッション画面" />
+    <figcaption>セッション「架空作業内容！」を開いた状態</figcaption>
   </figure>
+  <div class="usage-copy single-column">
+    <p><strong>1. 対象セッションを開く</strong><br />メニューバーからSplitLogを開き、今日の作業セッションを表示する。</p>
+    <p><strong>2. 作業単位をSplitで見る</strong><br />実装調査、UI修正、レビュー対応、日報作成のように作業を分ける。</p>
+    <p><strong>3. 時間配分をざっくり把握する</strong><br />リングと一覧で、どの作業に時間を使ったかを確認できる。</p>
+  </div>
 </div>
 
 Note:
-実アプリのスクリーンショットと、操作の流れを対応させて説明する。
+まずセッション全体を見せて、SplitLogが何を記録するアプリなのかを実画面で説明する。
+
+---
+
+<!-- .slide: class="content-slide app-shot-slide" -->
+
+## Splitとメモを残す
+
+<div class="usage-two-shot-layout">
+  <figure class="app-shot-frame split-list-shot">
+    <img src="assets/split-list-checkbox.png" alt="Split一覧のチェック状態" />
+    <figcaption>Split一覧：作業ごとの時間とメモを確認</figcaption>
+  </figure>
+  <figure class="app-shot-frame memo-edit-shot">
+    <img src="assets/usage-memo-editor.png" alt="Splitメモ編集画面" />
+    <figcaption>メモ編集画面：その場で気づきを残す</figcaption>
+  </figure>
+</div>
+
+<div class="usage-copy usage-copy-row">
+  <p><strong>Splitを選ぶ</strong><br />いま進めている作業を選び、時間をそのSplitに積む。</p>
+  <p><strong>メモを残す</strong><br />調べたこと、直したこと、次に見ることを作業中に短く書く。</p>
+  <p><strong>後で拾える形にする</strong><br />細かい作業も残しておくと、最後に日報へ整えやすい。</p>
+</div>
+
+Note:
+ここでは、Split一覧とメモ編集画面を分けて見せる。時間だけでなく、作業中の文脈も残すことを説明する。
+
+---
+
+<!-- .slide: class="content-slide app-shot-slide" -->
+
+## 最後に日報へ整える
+
+<div class="usage-summary-layout">
+  <figure class="app-shot-frame summary-screen-shot">
+    <img src="assets/usage-summary-screen.png" alt="SplitLogのサマリー画面" />
+    <figcaption>サマリー画面：Splitごとのメモをまとめて確認</figcaption>
+  </figure>
+  <div class="usage-copy single-column">
+    <p><strong>1. サマリーを確認する</strong><br />作業中に残したメモを、Splitごとの流れで見直す。</p>
+    <p><strong>2. 必要な内容だけ整える</strong><br />日報として読みやすい順番と文章に少し整える。</p>
+    <p><strong>3. 思い出す時間を減らす</strong><br />最後にゼロから考えるのではなく、残したログを使って仕上げる。</p>
+  </div>
+</div>
+
+Note:
+日報は最後に思い出して書くものではなく、作業中に残したログを整えるものだとつなげる。
 
 ---
 
