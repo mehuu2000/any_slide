@@ -16,6 +16,101 @@ Note:
 
 <!-- .slide: class="content-slide" -->
 
+## 自己紹介
+
+<div class="intro-layout">
+  <div class="intro-name">
+    <img class="intro-mini-icon profile-icon" src="assets/profile-fish.jpg" alt="濱田真仁のプロフィールイラスト" />
+    <span>Presenter</span>
+    <h3>濱田 真仁</h3>
+    <p>はまちゃん / はまちー</p>
+  </div>
+  <div class="intro-cards">
+    <div>
+      <div class="intro-role-heading">
+        <strong>役割</strong>
+        <img src="assets/tasktalk-logo.svg" alt="TaskTalk logo" />
+      </div>
+      <p>インターン生として、TaskTalkプロジェクトのタスク管理や開発を担当。</p>
+    </div>
+    <div>
+      <strong>AI活用</strong>
+      <p>Codexを利用しながら、AIを使った開発の進め方を勉強中。</p>
+    </div>
+    <div>
+      <strong>作った理由</strong>
+      <p>日報作成や作業時間の整理を、もう少し楽にしたかった。</p>
+    </div>
+  </div>
+</div>
+
+Note:
+自己紹介は短くする。細かい経歴より、日報作成に課題を感じてSplitLogを作った立場を伝える。
+
+---
+
+<!-- .slide: class="content-slide conclusion-slide" -->
+
+## SplitLogを使って得た結論
+
+<div class="headline-message">日報は「思い出す」より<br />「残して整える」</div>
+
+<p class="conclusion-lead">SplitLogは、作業中の時間とメモを残し、最後に日報へ整えるために作ったアプリです。</p>
+
+<div class="conclusion-grid">
+  <div>
+    <span>01</span>
+    <h3>作業中に残す</h3>
+    <p>作業時間と作業内容を、Splitごとのログとしてその場で残す。</p>
+  </div>
+  <div>
+    <span>02</span>
+    <h3>流れが残る</h3>
+    <p>AI待ち、UI修正、レビュー対応など、並行する作業も分けて記録できる。</p>
+  </div>
+  <div>
+    <span>03</span>
+    <h3>最後に整える</h3>
+    <p>業務後はサマリーをコピーし、必要な部分だけ整えて日報に使う。</p>
+  </div>
+</div>
+
+Note:
+背景説明の前に、SplitLogで実際にできるようになったことを先に伝える。
+
+---
+
+<!-- .slide: class="content-slide effect-slide" -->
+
+## 実際に使ってどう変わったか
+
+<div class="effect-layout">
+  <div class="time-comparison">
+    <div>
+      <span>Before</span>
+      <strong>約15分</strong>
+      <p>複数の情報源を見返し、作業内容と時間を思い出しながら日報を書く。</p>
+    </div>
+    <div class="arrow-step">→</div>
+    <div>
+      <span>After</span>
+      <strong>約1分</strong>
+      <p>SplitLogのサマリーをコピーし、最後に少し整えて日報に使う。</p>
+    </div>
+  </div>
+  <div class="effect-note">
+    <h3>体感で、日報作成の仕上げ時間が短くなった</h3>
+    <p>Splitごとのメモは作業中に追記する。業務後にまとめて思い出す時間を減らすのがポイント。</p>
+  </div>
+</div>
+
+Note:
+数字は体感。厳密な計測ではなく、約5ヶ月使ってみた感覚として説明する。逐次メモを書く時間は作業中に発生するが、業務終了後のまとめ作業は軽くなった、という表現にする。
+
+---
+
+<!-- .slide: class="content-slide" -->
+
 ## 作った背景
 
 <div class="problem-layout">
@@ -173,39 +268,6 @@ Note:
 
 Note:
 この画面では、セッション名、時間配分、Splitごとの時間、操作ボタンが一画面にまとまっていることを説明する。
-
----
-
-<!-- .slide: class="content-slide app-shot-slide" -->
-
-## 日報につながる使い方
-
-<div class="daily-flow-layout">
-  <div class="daily-flow">
-    <div>
-      <strong>測る</strong>
-      <p>「実装調査」「UI修正」など、実際の作業名で時間を残す。</p>
-    </div>
-    <div>
-      <strong>分ける</strong>
-      <p>割り込みやAI待ちを、別のSplitとして切り出す。</p>
-    </div>
-    <div>
-      <strong>書く</strong>
-      <p>各Splitのメモに、やったことや判断を短く残す。</p>
-    </div>
-    <div>
-      <strong>まとめる</strong>
-      <p>最後にサマリーをコピーし、日報や振り返りの下書きにする。</p>
-    </div>
-  </div>
-  <figure class="app-shot-frame compact-shot">
-    <img src="assets/splitlog-app-overview.png" alt="日報作成につながるSplitLog画面" />
-  </figure>
-</div>
-
-Note:
-単なるタイマーではなく、あとで文章化しやすい作業ログを作る流れとして説明する。
 
 ---
 
