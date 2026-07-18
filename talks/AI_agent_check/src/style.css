@@ -1,0 +1,141 @@
+:root {
+  --slide-accent: #0f766e;
+  --slide-accent-2: #7c3aed;
+  --slide-ink: #18212f;
+  --slide-muted: #64748b;
+  --slide-line: #d9e2ec;
+  --slide-panel: #f8fafc;
+}
+
+.reveal {
+  color: var(--slide-ink);
+  font-size: 34px;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--slide-ink);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.reveal h1 {
+  font-size: 2em;
+}
+
+.reveal h2 {
+  border-left: 0.16em solid var(--slide-accent);
+  padding-left: 0.35em;
+  font-size: 1.18em;
+}
+
+.reveal h3 {
+  font-size: 1em;
+}
+
+.reveal p,
+.reveal li {
+  line-height: 1.35;
+}
+
+.reveal ul {
+  margin-top: 0.35em;
+}
+
+.reveal li + li {
+  margin-top: 0.22em;
+}
+
+.reveal code {
+  border-radius: 4px;
+}
+
+.reveal .title-slide {
+  text-align: center;
+}
+
+.reveal .title-slide h1 {
+  color: var(--slide-accent);
+}
+
+.reveal .title-slide p {
+  color: var(--slide-muted);
+}
+
+.reveal .source {
+  color: var(--slide-muted);
+  font-size: 0.48em;
+  margin-top: 2.1em;
+}
+
+.reveal .flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0.55em;
+  margin: 0.8em 0 1.05em;
+}
+
+.reveal .flow div {
+  position: relative;
+  display: flex;
+  min-height: 4.5em;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--slide-line);
+  border-radius: 8px;
+  background: var(--slide-panel);
+  padding: 0.6em 0.75em;
+  text-align: center;
+  font-size: 0.56em;
+  line-height: 1.25;
+}
+
+.reveal .flow div:not(:last-child)::after {
+  content: ">";
+  position: absolute;
+  right: -0.7em;
+  top: 50%;
+  z-index: 1;
+  color: var(--slide-accent);
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+
+.reveal .flow.compact div {
+  min-height: 3.6em;
+}
+
+.reveal .message {
+  border-left: 0.22em solid var(--slide-accent-2);
+  background: var(--slide-panel);
+  margin-top: 1em;
+  padding: 0.65em 0.85em;
+  font-size: 0.72em;
+  line-height: 1.35;
+}
+
+.reveal .large {
+  color: var(--slide-accent);
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0.6em;
+}
+
+@media (max-width: 700px) {
+  .reveal .flow {
+    gap: 0.35em;
+  }
+
+  .reveal .flow div {
+    min-height: 4em;
+    padding: 0.45em 0.5em;
+    font-size: 0.46em;
+  }
+}
